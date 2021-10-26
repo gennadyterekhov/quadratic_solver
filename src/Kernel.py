@@ -1,4 +1,3 @@
-import math
 import cmath
 
 
@@ -36,7 +35,6 @@ class Kernel:
             self.action = self.cli_parameters[self.VALID_PARAMETERS_LENGTH]
     
     def perform(self):
-        # return 'result from kernel'
         try:
             default_method = getattr(self, self.DEFAULT_ACTION)
             method = getattr(self, self.action, default_method)
