@@ -1,6 +1,6 @@
 import java.lang.Math;
 
-class Main {
+class QuadraticSolver {
     public static void main(String[] args) {
         double coefA = 0;
         double coefB = 0;
@@ -10,7 +10,7 @@ class Main {
 
         if (args.length != 3) {
             System.out.printf("Expect 3 parameters, found %d\n", args.length);
-            return;
+            System.exit(1);
         }
 
         try {
@@ -19,13 +19,13 @@ class Main {
             coefC = Double.parseDouble(args[2]);
         } catch(Exception exception) {
             System.out.println("parameters must be of type int or double");
-            return;
+            System.exit(1);
         }
 
         if (coefA == 0.0) {
             double root1 = -coefC / coefB;
             System.out.printf("root : %f\n", root1);
-            return;   
+            System.exit(0);
         }
 
         radixBody = coefB * coefB - 4 * coefA * coefC;
@@ -33,7 +33,7 @@ class Main {
 
         if (radixBody < 0) {
             System.out.println("discriminant is negative, solution lies in complex numbers");
-            return;   
+            System.exit(0);
         }
 
         double root1 = (-coefB + Math.sqrt(radixBody)) / divisor;
