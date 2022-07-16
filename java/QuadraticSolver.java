@@ -1,5 +1,4 @@
 import java.lang.Math;
-
 class QuadraticSolver {
     public static void main(String[] args) {
         double coefA = 0;

@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+*/.idea/
+java/.DS_Store
+.DS_Store
+java/commons-math3-3.6.1-bin.tar.gz
